@@ -7,7 +7,6 @@ const getAll = async() => {
     return tasks;
 };
 
-
 //para não exportar uma por um objeto, cria uma e exporta
 module.exports = {
     getAll
