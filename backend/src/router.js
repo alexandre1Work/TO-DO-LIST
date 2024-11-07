@@ -13,5 +13,7 @@ Então é ideal que crie um arquivo para guardar essas funções (controllers)
 
 router.get('/tasks', tasksController.getAll);
 router.post('/tasks', tasksMiddlewares.validateBody, tasksController.createTask);
+router.delete('/tasks/:id', tasksController.deleteTask);
+
 
 module.exports = router;

@@ -23,8 +23,14 @@ const createTask = async (task) => {
     return {insertId: createdTask.insertId };
 }
 
+const deleteTask = async (id) => {
+    const removeTask = await conection.execute('DELETE FROM task WHERE id = ?', [id]);
+    return removeTask;
+}
+
 //para não exportar uma por um objeto, cria uma e exporta
 module.exports = {
     getAll,
-    createTask
+    createTask,
+    deleteTask,
 };
