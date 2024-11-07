@@ -5,6 +5,8 @@ const router = require('./router');
 
 // const app recebendo a instancia do express
 const app = express();
+//para conseguir usar arquivor json
+app.use(express.json());
 
 //sempre vai usar as rotas
 app.use(router);

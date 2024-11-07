@@ -12,4 +12,6 @@ Então é ideal que crie um arquivo para guardar essas funções (controllers)
 
 router.get('/tasks', tasksController.getAll);
 
+router.post('/tasks', tasksController.createTask);
+
 module.exports = router;
