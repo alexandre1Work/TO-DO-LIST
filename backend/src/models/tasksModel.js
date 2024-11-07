@@ -28,9 +28,21 @@ const deleteTask = async (id) => {
     return removeTask;
 }
 
+const updateTask = async (id, task) => {
+    const query = 'UPDATE task SET title = ?, status = ? WHERE id = ?';
+
+    //const title = task.title;
+    //const status = task.status;
+    const { title, status } = task;
+
+    const updatedTask = await conection.execute(query, [title, status, id]);
+    return updatedTask;
+}
+
 //para não exportar uma por um objeto, cria uma e exporta
 module.exports = {
     getAll,
     createTask,
     deleteTask,
+    updateTask,
 };
