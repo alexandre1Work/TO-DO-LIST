@@ -1,5 +1,6 @@
 const express = require('express');
 const tasksController = require('./controllers/tasksController'); //funções
+const tasksMiddlewares = require('./middlewares/tasksMiddlewares'); //função Middleware 
 const router = express.Router();
 /*
 GET - PARA LISTAR
@@ -11,7 +12,6 @@ Então é ideal que crie um arquivo para guardar essas funções (controllers)
 */
 
 router.get('/tasks', tasksController.getAll);
-
-router.post('/tasks', tasksController.createTask);
+router.post('/tasks', tasksMiddlewares.validateBody, tasksController.createTask);
 
 module.exports = router;

@@ -14,6 +14,7 @@ const createTask = async (task) => {
     //criando a data
     const dateUTC = new Date(Date.now()).toUTCString();
 
+    // OU const title = task.title;
     const { title } = task;
 
     //para salvar e retornar um unico array []
