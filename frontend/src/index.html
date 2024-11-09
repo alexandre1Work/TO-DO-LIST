@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    
+    <main>
+        <form >
+            <input type="text" placeholder="Adicionar nova tarefa">
+            <button type="button">+</button>
+        </form>
+    </main>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tarefa</th>
+                <th>Criada em</th>
+                <th>Status</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Terminar site</td>
+                <td>24/10/2024</td>
+                <td>
+                    <Select>
+                        <option value="pendente" selected>pendente</option>
+                        <option value="em andamento">em andamento</option>
+                        <option value="concluída">concluída</option>
+                    </Select>
+                </td>
+                <td>
+                    <button>
+                        <span><i class="fa-solid fa-pen-to-square"></i></span>
+                    </button>
+                    <button>
+                        <span><i class="fa-solid fa-trash"></i></span>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <script src="https://kit.fontawesome.com/90a969b901.js" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
