@@ -1,4 +1,4 @@
-//----------- CRIANDO UM SERVIDOR COM O PADRÃO NODE -----------//
+//----------- CRIANDO UM SERVIDOR COM O PADRÃO NODE -----------///
 
 // import {createServer} from 'node:http'
 // const server = createServer ((request, response) => {
